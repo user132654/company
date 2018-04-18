@@ -1,0 +1,30 @@
+﻿@model CountMonthFormModel
+
+<div class='col'>
+    <div class='filter card p-3 mb-2'>
+        <form method="post" asp-controller="ObjectOfExpenditures" asp-action="CountMonth">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class='form-group'>
+                <div class="col-sm-6">
+                    <label asp-for='From'>От</label>
+                    <input class='form-control form-control-sm' asp-for="From">
+                </div>
+                <div class="col-sm-6">
+                    <label asp-for='To'>До</label>
+                    <input class='form-control form-control-sm' asp-for="To">
+                </div>
+            </div>
+            <div class='form-group'>
+                <label asp-for="MaterialId">Материал</label>
+                <select asp-for="MaterialId" class ="form-control" asp-items="ViewBag.MaterialId"></select>
+            </div>
+            <div class='form-group'>
+                <label asp-for='ProviderId'>Поставщик</label>
+                <select asp-for="ProviderId" class="form-control" asp-items="ViewBag.ProviderId"></select>
+            </div>        
+            <div class='form-group text-center'>
+                <button type="submit" class="btn btn-default">Показать</button>
+            </div>
+        </form>
+    </div>
+</div>

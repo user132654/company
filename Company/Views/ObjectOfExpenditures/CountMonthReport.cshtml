@@ -1,0 +1,9 @@
+﻿@model CountMonthReportViewModel
+
+<div class="container">
+
+    <div>Сумма: @Model.OverallAmount</div>
+   
+    @Html.Partial("ObjectOfExpendituresTable", Model.ObjectOfExpenditures)
+    
+</div>
